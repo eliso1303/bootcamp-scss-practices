@@ -28,9 +28,7 @@ body {
       }
 
       div {
-        padding-left: 142px;
-        padding-top: 33px;
-        padding-bottom: 34px;
+        padding: 34px 58px 34px 142px;
         font-family: "Lato", sans-serif;
         position: relative;
 
@@ -57,7 +55,7 @@ body {
           font-size: 14px;
           line-height: 26px;
           letter-spacing: 1.41px;
-          margin-bottom: 7px;
+          margin-bottom: 6px;
         }
 
         p {
@@ -73,7 +71,7 @@ body {
         top: 15px;
         right: 17px;
         text-decoration: none;
-        color:#CFD2D3;
+        color: #cfd2d3;
 
         &:before {
           font-family: fontawesome;
@@ -81,6 +79,56 @@ body {
           width: 10px;
           height: 10px;
           font-size: 14px;
+        }
+      }
+    }
+
+    .success {
+      div {
+        &:before {
+          content: "\f00c";
+          background: #97e411;
+          padding: 12px 13px;
+          border: 7px solid #7bc200;
+          color: #558502;
+        }
+      }
+    }
+
+    .danger {
+      div {
+        &:before {
+          content: "\f00d";
+          background: #fd7761;
+          padding: 12px 15px;
+          border: 7px solid #f55c43;
+          color: #d52e13;
+          font-size: 25px;
+        }
+      }
+    }
+
+    .light {
+      div {
+        &:before {
+          content: "\f0e7";
+          background: #6fd9fc;
+          padding: 12px 19px;
+          border: 7px solid #47b4f6;
+          color: #0787d4;
+        }
+      }
+    }
+
+    .info {
+      margin-right: 0px;
+
+      div {
+        &:before {
+          content: "\f129";
+          background: #a39cdc;
+          border: 7px solid #8781bd;
+          color: #5b568e;
         }
       }
     }
