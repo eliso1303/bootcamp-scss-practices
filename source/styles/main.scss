@@ -1,50 +1,97 @@
-$color-1:#2C3E50;
-$color-2:#A1B1BC;
+$color-1: #2c3e50;
+$color-2: #a1b1bc;
 
 * {
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 
-    .container {
-        width:1170px;
-        margin:auto;
+  .container {
+    width: 1170px;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
 
-        .badge {
-            border-radius:5px;
-            border:1px solid #E2E6E7;
-            margin-top:20px;
+    .badge {
+      border-radius: 7px;
+      border: 1px solid #e2e6e7;
+      margin-right: 30px;
+      margin-bottom: 30px;
+      position: relative;
 
-            div {
-                padding-left: 142px;
-                padding-top:42px;
-                padding-bottom:42px;
-                font-family: 'Lato', sans-serif;
-                
-                &:before {
-                    font-family:fontawesome;
-                    content:'\f12a';
-                }
+      &:nth-child(2n) {
+        margin-right: 0px;
+      }
 
-                h2 {
-                    color:$color-1;
-                    font-family: 'Lato', sans-serif;
-                    font-weight:900;
-                    font-size:14px;
-                    line-height: 26px;
-                }
+      div {
+        padding-left: 142px;
+        padding-top: 33px;
+        padding-bottom: 34px;
+        font-family: "Lato", sans-serif;
+        position: relative;
 
-                p {
-                    color:$color-2;
-                    font-weight:400;
-                    font-size:14px;
-                    line-height:24px;
-                }
-            }
+        &:before {
+          font-family: fontawesome;
+          content: "\f12a";
+          background: #ffc12d;
+          padding: 12px 20px;
+          display: inline-block;
+          border: 7px solid #f9b718;
+          position: absolute;
+          border-radius: 50%;
+          font-size: 24px;
+          line-height: 26px;
+          color: #a47503;
+          left: 50px;
+          top: 42px;
         }
+
+        h2 {
+          color: $color-1;
+          font-family: "Lato", sans-serif;
+          font-weight: 900;
+          font-size: 14px;
+          line-height: 26px;
+          letter-spacing: 1.41px;
+          margin-bottom: 7px;
+        }
+
+        p {
+          color: $color-2;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+
+      a {
+        position: absolute;
+        top: 15px;
+        right: 17px;
+        text-decoration: none;
+        color:#CFD2D3;
+
+        &:before {
+          font-family: fontawesome;
+          content: "\f00d";
+          width: 10px;
+          height: 10px;
+          font-size: 14px;
+        }
+      }
     }
+
+    .width {
+      &-full {
+        width: 100%;
+      }
+      &-half {
+        width: 48.7%;
+      }
+    }
+  }
 }
