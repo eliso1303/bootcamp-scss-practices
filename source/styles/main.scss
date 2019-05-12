@@ -28,23 +28,23 @@ body {
       }
 
       div {
-        padding: 34px 58px 34px 142px;
+        padding: 34px 59px 34px 141px;
         font-family: "Lato", sans-serif;
         position: relative;
 
         &:before {
           font-family: fontawesome;
           content: "\f12a";
-          background: #ffc12d;
+          background: transparent;
           padding: 12px 20px;
           display: inline-block;
-          border: 7px solid #f9b718;
+          border: 7px solid #c89210;
           position: absolute;
           border-radius: 50%;
           font-size: 24px;
           line-height: 26px;
           color: #a47503;
-          left: 50px;
+          left: 49px;
           top: 42px;
         }
 
@@ -63,15 +63,16 @@ body {
           font-weight: 400;
           font-size: 14px;
           line-height: 24px;
+          color:#2C3E50;
         }
       }
 
       a {
         position: absolute;
-        top: 15px;
-        right: 17px;
+        top: 14px;
+        right: 18px;
         text-decoration: none;
-        color: #cfd2d3;
+        color: #b18009;
 
         &:before {
           font-family: fontawesome;
@@ -83,11 +84,43 @@ body {
       }
     }
 
+    .solid {
+      background: #ffc12d;
+
+      &-green {
+        background: #a7ec2f;
+
+        a {
+          color: #558502;
+        }
+      }
+      &-pink {
+        background: #feb1a4;
+
+        a {
+          color: #d52e13;
+        }
+      }
+      &-blue {
+        background: #85ebfa;
+
+        a {
+          color: #0787d4;
+        }
+      }
+      &-purple {
+        background: #aacdf6;
+
+        a {
+          color: #5b568e;
+        }
+      }
+    }
+
     .success {
       div {
         &:before {
           content: "\f00c";
-          background: #97e411;
           padding: 12px 13px;
           border: 7px solid #7bc200;
           color: #558502;
@@ -99,7 +132,6 @@ body {
       div {
         &:before {
           content: "\f00d";
-          background: #fd7761;
           padding: 12px 15px;
           border: 7px solid #f55c43;
           color: #d52e13;
@@ -112,7 +144,6 @@ body {
       div {
         &:before {
           content: "\f0e7";
-          background: #6fd9fc;
           padding: 12px 19px;
           border: 7px solid #47b4f6;
           color: #0787d4;
@@ -126,7 +157,6 @@ body {
       div {
         &:before {
           content: "\f129";
-          background: #a39cdc;
           border: 7px solid #8781bd;
           color: #5b568e;
         }
