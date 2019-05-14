@@ -7,20 +7,50 @@
     border: 1px solid $border-6;
     border-radius: 7px;
 
+    a {
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        color: $color-4;
+        text-decoration: none;
+
+        &::before {
+            content: '\f00d';
+            color: $color-10;
+            font-family: 'fontawesome', sans-serif;
+            font-size: 14px;
+        }
+    }
+
     &.solid {
         background: $bg-1;
+
+        &::before {
+            border: 7px solid $border-1;
+        }
+
+        a {
+
+            &::before {
+                color: $color-4;
+            }
+        }
     }
 
     &::before {
         content: '\f12a';
+        display: flex;
         flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
         margin-right: 29px;
-        padding: 12px 20px;
-        border: 7px solid $border-1;
+        border: 7px solid $border-7;
         border-radius: 50%;
-        background: transparent;
+        background: $bg-1;
         color: $color-3;
-        font-family: 'fontawesome';
+        font-family: 'fontawesome', sans-serif;
         font-size: 24px;
     }
 
@@ -45,93 +75,104 @@
         }
     }
 
-      a {
-          position: absolute;
-          top: 14px;
-          right: 18px;
-          color: $color-4;
-          text-decoration: none;
+    &.success {
 
-      &::before {
-          content: '\f00d';
-          width: 10px;
-          height: 10px;
-          font-family: 'fontawesome';
-          font-size: 14px;
-      }
-    }
-}
+        &.solid {
+            background: $bg-2;
 
-.success {
+            &::before {
+                background: $bg-2;
+            }
 
-    &.solid {
-      background: $bg-2;
+            a {
 
-      a {
-        color: $color-5;
-      }
-    }
+                &::before {
+                    color: $color-5;
+                }
+            }
+        }
 
-    &::before {
-        content: '\f00c';
-        padding: 12px 13px;
-        border: 7px solid $border-2;
-        color: $color-5;
-    }
-}
-
-.danger {
-
-    &.solid {
-        background: $bg-3;
-
-        a {
-          color: $color-6;
+        &::before {
+            content: '\f00c';
+            border: 7px solid $border-2;
+            background: $bg-6;
+            color: $color-5;
         }
     }
 
-    &::before {
-        content: '\f00d';
-        padding: 12px 15px;
-        border: 7px solid $border-3;
-        color: $color-6;
-        font-size: 25px;
+    &.danger {
+
+        &.solid {
+            background: $bg-3;
+
+            &::before {
+                background: $bg-3;
+            }
+
+            a {
+
+                &::before {
+                    color: $color-6;
+                }
+            }
+        }
+
+        &::before {
+            content: '\f00d';
+            border: 7px solid $border-3;
+            background: $bg-7;
+            color: $color-6;
+            font-size: 25px;
+        }
     }
-}
 
-.light {
+    &.light {
 
-  &.solid {
-      background: $bg-4;
+        &.solid {
+            background: $bg-4;
 
-      a {
-          color: $color-7;
-      }
-  }
+            &::before {
+                background: $bg-4;
+            }
 
-  &::before {
-      content: '\f0e7';
-      padding: 12px 19px;
-      border: 7px solid $border-4;
-      color: $color-7;
-  }
-}
+            a {
 
-.info {
-    grid-column: span 2;
-    margin-right: 0;
+                &::before {
+                    color: $color-7;
+                }
+            }
+        }
 
-    &.solid {
-        background: $bg-5;
+        &::before {
+            content: '\f0e7';
+            border: 7px solid $border-4;
+            background: $bg-8;
+            color: $color-7;
+        }
+    }
 
-        a {
+    &.info {
+
+        &.solid {
+            background: $bg-5;
+
+            &::before {
+                background: $bg-5;
+            }
+
+            a {
+
+                &::before {
+                    color: $color-8;
+                }
+            }
+        }
+
+        &::before {
+            content: '\f129';
+            border: 7px solid $border-5;
+            background: $bg-9;
             color: $color-8;
         }
-    }
-
-    &::before {
-        content: '\f129';
-        border: 7px solid $border-5;
-        color: $color-8;
     }
 }
